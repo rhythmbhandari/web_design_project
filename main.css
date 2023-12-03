@@ -1,4 +1,95 @@
-* {
-    box-sizing: border-box;
-  }
+.main{
+  background: #ffffff;
+  font-family: "Roboto", sans-serif;
+  padding: 22px 0;
+}
+
+.movie-blog {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 22px;
+}
+
+
+h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #333;
   
+}
+
+
+#card {
+    min-height: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #555;
+  position: relative;
+  top: 0;
+  transition: all 0.2s ease-in;
+}
+
+
+
+#card .back-image {
+    padding-bottom: 50%;
+  background-size: cover;
+  background-position: center center;
+}
+
+#card p {
+    flex: 1;
+  line-height: 1.5;
+
+}
+
+#card span {
+    font-size: 11px;
+  font-weight: bold;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.5em 0 0 0;
+
+}
+
+#card article {
+    padding: 22px;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+
+
+#card:hover {
+    top: -6px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+  @media only screen and (min-width: 500px) {
+    .movie-blog {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .post-5 {
+        grid-column: 1 / span 2;
+      }
+      .post-5 h1 {
+        font-size: 28px;
+      }
+}
+
+@media only screen and (min-width: 850px) {
+    .movie-blog {
+        grid-template-columns: repeat(4, 1fr);
+      }
+}
