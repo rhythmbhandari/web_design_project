@@ -61,7 +61,7 @@ h1 {
 
 
 
-#card {
+.card {
   min-height: 100%;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -74,18 +74,18 @@ h1 {
   transition: all 0.2s ease-in;
 }
 
-#card .back-image {
+.card .back-image {
   padding-bottom: 50%;
   background-size: cover;
   background-position: center center;
 }
 
-#card p {
+.card p {
   flex: 1;
   line-height: 1.5;
 }
 
-#card span {
+.card span {
   font-size: 11px;
   font-weight: bold;
   color: #777;
@@ -94,7 +94,7 @@ h1 {
   margin: 1.5em 0 0 0;
 }
 
-#card article {
+.card article {
   padding: 22px;
   display: flex;
   flex: 1;
@@ -102,7 +102,7 @@ h1 {
   flex-direction: column;
 }
 
-#card:hover {
+.card:hover {
   top: -6px;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
@@ -116,10 +116,10 @@ h1 {
   .movie-blog {
     grid-template-columns: repeat(2, 1fr);
   }
-  .post-5 {
+  #post-5 {
     grid-column: 1 / span 2;
   }
-  .post-5 h1 {
+  #post-5 h1 {
     font-size: 28px;
   }
 }
