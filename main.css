@@ -1,3 +1,7 @@
+body {
+  margin: 0 0 0 0;
+}
+
 main {
   background: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -20,30 +24,42 @@ h1 {
   color: #333;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+.top-nav, .top-nav-main {
+  background-color: #390f06;
+  text-align: left;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
 }
 
-li {
-  float: left;
+.top-nav {
+    display: none
 }
 
-li a {
-  display: block;
-  color: white;
+
+.top-nav li {
+  padding: 10px;
+  display: inline;
+  border: none;
+}
+
+.top-nav ul {
+  padding: 20px;
+  margin-bottom: 10px;
   text-align: center;
-  padding: 14px 16px;
+  border-radius: 7px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #210301;
+}
+
+.top-nav a {
+  color: #ede7cf;
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
+
 
 #card {
   min-height: 100%;
@@ -91,6 +107,11 @@ li a:hover {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
+.logo, .home_icon, .phone_icon, .logo_icon {
+  max-width: 6%;
+  margin: 20px;
+}
+
 @media only screen and (min-width: 500px) {
   .movie-blog {
     grid-template-columns: repeat(2, 1fr);
@@ -107,4 +128,28 @@ li a:hover {
   .movie-blog {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .logo {
+    max-width: 4%;
+  }
+
+}
+
+@media only screen and (min-width: 850px) {
+    .top-nav a {
+        flex-direction: row;
+    }
+
+    .label {
+        display: inline;
+        margin-top: 5px; 
+    }
+
+    .top-nav {
+        display: flex;
+    }
+
+    .top-nav-main {
+        display: none; 
+    }
 }
