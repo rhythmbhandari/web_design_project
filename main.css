@@ -1,5 +1,5 @@
 body {
-  margin: 0 0 0 0;
+  margin: 0;
   background: #f1f0eb;
 }
 
@@ -10,12 +10,9 @@ main {
 
 .movie-blog {
   width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 10%;
+  margin: 10% auto 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
   gap: 22px;
 }
 
@@ -26,111 +23,110 @@ h1 {
 }
 
 .top-nav {
-  text-align: left;
   margin-bottom: 10px;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  align-items: end;
-  flex-wrap: wrap;
-}
-
-.top-nav {
+  align-items: flex-end;
   display: none;
+  text-align: left;
 }
 
 .top-nav li {
-  padding: 10px;
   display: inline;
+  padding: 12px;
   border: none;
 }
 
 .top-nav ul {
-  padding: 20px;
-  margin-bottom: 10px;
+  padding: 22px;
+  margin-bottom: 12px;
   text-align: center;
-  border-radius: 7px;
+  border-radius: 8px;
 }
 
 .top-nav a {
-  color: #5b5851;
   text-decoration: none;
+  color: #5b5851;
 }
 
 .top-nav-main {
   background: #f1f0eb;
-  justify-content: space-evenly;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   display: inline-block;
+  justify-content: space-evenly;
 }
 
 .card {
   min-height: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: #555;
+  color: #555555;
   position: relative;
-  top: 0;
-  transition: all 0.2s ease-in;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: top 0.25s ease-in, box-shadow 0.25s ease-in;
 }
 
 .card .back-image {
-  padding-bottom: 50%;
   background-size: cover;
+  padding-bottom: 50%;
   background-position: center center;
 }
 
 .card p {
-  flex: 1;
   line-height: 1.5;
+  flex: 1;
 }
 
 .card span {
-  font-size: 11px;
+  color: #777777;
+  font-size: 14px;
   font-weight: bold;
-  color: #777;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 1.5em 0 0 0;
-}
-
-.card article {
-  padding: 22px;
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-  flex-direction: column;
+  letter-spacing: 0.06em;
+  text-align: end;
+  margin: 1.6em 0 0 0;
 }
 
 .card:hover {
-  top: -6px;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    top: -8px;
+  }
+
+.card article {
+  display: flex;
+  padding: 22px;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 
 .logo,
 .home_icon,
 .phone_icon,
 .logo_icon {
-  max-width: 6%;
   color: #ffffff;
-  margin: 20px;
+  max-width: 8%;
+  margin: 22px;
 }
 
 h2 {
-  font-size: 2rem;
   margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 0.6rem;
-  font-size: 0.9rem;
-  color: #333;
+  color: #777777;
   font-family: "Roboto", sans-serif;
 }
+
 .Head-Img {
   position: relative;
   z-index: 0;
@@ -141,24 +137,24 @@ p {
 }
 
 .inside-img {
+  padding-top: 22%;
+  padding-bottom: 22%;
   margin: 0 auto;
-  padding-top: 20%;
-  padding-bottom: 20%;
 }
 
 .text-back {
-  color: #f1f0eb;
   text-align: center;
-  text-shadow: 0 0 50px black;
+  color: #ffffff;
+  text-shadow: 0 0 50px 777777;
 }
 
 form {
-  flex: 0 1 600px;
-  margin-top: 20px;
-  padding: 10px;
+  margin-top: 22px;
+  padding: 12px;
   position: relative;
-  background: #ffff;
+  background: #ffffff;
   border-radius: 8px;
+  flex: 0 1 700px;
 }
 
 .contact-group {
@@ -176,14 +172,14 @@ form {
 }
 
 .form-title {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .form-group.message {
@@ -196,33 +192,33 @@ form {
 }
 
 .form-control {
-  width: 100%;
-  padding: 10px 0;
   background: none;
   border: none;
-  border-bottom: 1px solid #666;
-  color: #ddd;
+  outline: none;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #777777;
+  color: #777777;
   font-size: 14px;
   text-transform: uppercase;
-  outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.25s;
 }
 
 .form-control::placeholder {
-  color: #666;
+  color: #777777;
 }
 
 .form-control:focus {
-  border-bottom-color: #ddd;
+  border-bottom-color: #ffffff;
 }
 
 .form-control-button {
-  background: none;
   border: none;
+  background: none;
+  outline: none;
   color: #000000;
   font-size: 14px;
   cursor: pointer;
-  outline: none;
 }
 
 .form-control-button:hover {
@@ -234,7 +230,7 @@ form {
 }
 
 .contact-item.left {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .form-title {
@@ -259,12 +255,12 @@ form {
 
 .section-header {
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #upcoming-movies {
-  background-repeat: cover;
   padding: 30px 0;
+  background-repeat: cover;
 }
 
 .upcoming-movies-img img {
@@ -274,21 +270,15 @@ form {
 }
 .upcoming-movies-inner {
   margin: 20px;
-  color: red;
+  color: #777777;
 }
 
-.upcoming-movies-inner h3 {
-  text-align: justify;
-  margin: 10px auto;
-  line-height: 1.6;
-  font-size: 15px;
-}
-
+.upcoming-movies-inner h3,
 .upcoming-movies-inner p {
   text-align: justify;
-  line-height: 1.6;
-  font-size: 15px;
-  margin: 10px auto;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 12px auto;
 }
 
 footer {
@@ -310,23 +300,24 @@ footer {
   object-fit: cover;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 550px) {
   .movie-blog {
     grid-template-columns: repeat(2, 1fr);
   }
-  #post-5 {
-    grid-column: 1 / span 2;
-  }
+
   #post-5 h1 {
     font-size: 28px;
+  }
+
+  #post-5 {
+    grid-column: 1 / span 2;
   }
 }
 
 @media only screen and (min-width: 850px) {
   .section-header {
-    font-size: 17px;
+    font-size: 18px;
     padding: 20px;
-    font-weight: 400;
   }
 
   #upcoming-movies {
@@ -334,7 +325,7 @@ footer {
   }
 
   .contact {
-    height: 79vh;
+    height: 80vh;
     padding-top: 30px;
   }
 
@@ -345,13 +336,13 @@ footer {
 
   .column-left {
     width: 35%;
-    padding: 20px;
+    padding: 22px;
     margin-left: 50px;
   }
 
   .column-right {
     width: 65%;
-    padding: 20px;
+    padding: 22px;
   }
 
   form {
@@ -373,18 +364,18 @@ footer {
 
   .upcoming-movies-inner h3 {
     text-align: start;
-    line-height: 1.6;
-    font-size: 15px;
+    line-height: 1.5;
+    font-size: 16px;
   }
   .upcoming-movies-inner p {
     text-align: justify;
-    margin-right: 20px;
-    line-height: 1.6;
-    font-size: 15px;
+    margin-right: 22px;
+    line-height: 1.5;
+    font-size: 16px;
   }
 
   .upcoming-movies-inner h3 {
-    font-size: 25px !important;
+    font-size: 26px;
   }
 
   .alternate {
@@ -402,7 +393,7 @@ footer {
     left: 4%;
   }
   .movie-blog {
-    margin-top: 3%;
+    margin-top: 4%;
     grid-template-columns: repeat(4, 1fr);
   }
 
