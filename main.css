@@ -69,16 +69,27 @@ h1 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   transition: top 0.25s ease-in, box-shadow 0.25s ease-in;
 }
-
 .card .back-image {
   background-size: cover;
   padding-bottom: 50%;
   background-position: center center;
 }
 
+.back-image {
+  position: relative
+}
+
+.imgClass {
+  width: 100%; height: 100%; object-fit:cover; position: absolute; top: 0; left: 0;
+}
+
 .card p {
   line-height: 1.5;
   flex: 1;
+}
+
+label {
+  color: #777777;
 }
 
 .card span {
@@ -105,6 +116,15 @@ h1 {
 }
 
 
+
+
+@keyframes slide {
+  to{
+      margin-left: 60%;
+  }
+}
+
+
 .logo,
 .home_icon,
 .phone_icon,
@@ -114,9 +134,14 @@ h1 {
   margin: 22px;
 }
 
+
 h2 {
   margin-bottom: 2rem;
   font-size: 2rem;
+}
+
+.logo {
+  animation: slide 2s linear infinite alternate;
 }
 
 p {
@@ -171,19 +196,13 @@ form {
   flex-direction: column;
 }
 
-.form-title {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  font-size: 24px;
-}
 
 .form-group {
   margin-bottom: 16px;
 }
 
 .form-group.message {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .form-group.buttons {
@@ -266,7 +285,12 @@ form {
 .upcoming-movies-img img {
   width: 100%;
   height: 350px;
-  object-fit: cover;
+  object-fit: cover;    transition: transform 3s ease-in;
+
+}
+
+.upcoming-movies-img img:hover{
+  transform: scale(1.1); 
 }
 .upcoming-movies-inner {
   margin: 20px;
@@ -298,6 +322,7 @@ footer {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 550px) {
